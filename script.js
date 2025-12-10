@@ -10,6 +10,6 @@ function flashMastery() {
     statusText.innerText = "Dominating the Cloud";
     statusText.style.color = "#d4af37"; // Turn status gold
 
-    // 4. Optional: Play a console log message
-    console.log("Mastery flashed! User is Tuem Kieth Cabasan.");
+    // 4. Log to console (Operator View)
+    console.log("Mastery flashed! Operator: Czar (Tuem Kieth Cabasan)");
 }

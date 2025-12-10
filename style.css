@@ -25,16 +25,27 @@ body {
 .profile-pic {
     width: 200px;
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .profile-pic:hover {
-    transform: scale(1.05); /* slightly zoom in on hover */
+    transform: scale(1.05);
+}
+
+/* IGN Styling */
+.ign {
+    color: #0ac8b9; /* Kayle Teal */
+    margin-top: -15px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 1.1em;
+    letter-spacing: 1px;
 }
 
 /* Button Styling */
 button {
-    background-color: #0ac8b9; /* Kayle Green/Blue */
+    background-color: #0ac8b9;
     color: #000;
     border: none;
     padding: 10px 20px;
@@ -50,15 +61,55 @@ button:hover {
     background-color: #fff;
 }
 
-/* Mastery Badge Styling */
+/* --- TFT Section Styles --- */
+.tft-section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+/* Rank Badge Styling */
+.rank-badge {
+    width: 80px;
+    height: auto;
+    margin-bottom: -10px;
+    filter: drop-shadow(0 0 5px rgba(79, 255, 211, 0.6)); /* Platinum glow */
+    animation: float 3s ease-in-out infinite;
+}
+
+.rank-plat {
+    color: #4fffd3; /* Platinum Color */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(79, 255, 211, 0.4);
+}
+
+.lfd-link {
+    text-decoration: none;
+}
+
+.lfd {
+    color: #ff9f43; /* Orange */
+    font-weight: bold;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: transform 0.2s;
+}
+
+.lfd:hover {
+    color: #ffb776;
+    text-decoration: underline;
+}
+
+/* --- Mastery Badge & Animation --- */
 .hidden {
-    display: none; /* Hidden by default */
+    display: none;
 }
 
 .mastery-badge {
     width: 120px;
     margin-top: 20px;
-    animation: popUp 0.5s ease-out; /* The animation */
+    animation: popUp 0.5s ease-out;
 }
 
 .gold-text {
@@ -67,11 +118,29 @@ button:hover {
     letter-spacing: 2px;
     font-size: 1.2em;
     text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.5);
+    margin-bottom: 5px;
 }
 
-/* Animation Keyframes */
+.mastery-msg {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+/* Animations */
 @keyframes popUp {
     0% { transform: scale(0); opacity: 0; }
     80% { transform: scale(1.2); opacity: 1; }
     100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
 }
